@@ -82,9 +82,7 @@ export const ProphecyDetail: React.FC<ProphecyDetailProps> = ({ data }) => {
         
         {/* Header Section */}
         <div className="p-6 sm:p-10 bg-[#faf9f6] border-b border-stone-200 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-4 opacity-5">
-            <Book size={120} />
-          </div>
+          {/* BACKGROUND LOGO REMOVED AS REQUESTED */}
           
           <div className="relative z-10">
             <div className="flex flex-wrap gap-3 mb-5">
@@ -120,14 +118,17 @@ export const ProphecyDetail: React.FC<ProphecyDetailProps> = ({ data }) => {
             <div className="bg-stone-50 p-6 rounded-xl border border-stone-200 shadow-sm relative group mb-6">
               <Quote className="absolute top-4 left-4 h-8 w-8 text-stone-200 -z-0" />
               <div className="relative z-10">
-                <a 
-                  href={getBibleLink(prophecy.ot_stelle)} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-amber-700 font-serif font-bold text-lg mb-3 hover:underline decoration-amber-300 decoration-2 underline-offset-2"
-                >
-                  {prophecy.ot_stelle} <ExternalLink size={14} className="opacity-50" />
-                </a>
+                <div className="flex justify-between items-start mb-3">
+                  <a 
+                    href={getBibleLink(prophecy.ot_stelle)} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-amber-700 font-serif font-bold text-lg hover:underline decoration-amber-300 decoration-2 underline-offset-2"
+                  >
+                    {prophecy.ot_stelle} <ExternalLink size={14} className="opacity-50" />
+                  </a>
+                  {prophecy.ot_2_stelle && <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Textstelle 1</span>}
+                </div>
                 <p className="text-slate-700 italic text-lg leading-relaxed font-serif">"{prophecy.ot_text_kurz}"</p>
               </div>
             </div>
@@ -137,14 +138,17 @@ export const ProphecyDetail: React.FC<ProphecyDetailProps> = ({ data }) => {
               <div className="bg-stone-50 p-6 rounded-xl border border-stone-200 shadow-sm relative group">
                 <Quote className="absolute top-4 left-4 h-8 w-8 text-stone-200 -z-0" />
                 <div className="relative z-10">
-                  <a 
-                    href={getBibleLink(prophecy.ot_2_stelle)} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-amber-700 font-serif font-bold text-lg mb-3 hover:underline decoration-amber-300 decoration-2 underline-offset-2"
-                  >
-                    {prophecy.ot_2_stelle} <ExternalLink size={14} className="opacity-50" />
-                  </a>
+                  <div className="flex justify-between items-start mb-3">
+                    <a 
+                      href={getBibleLink(prophecy.ot_2_stelle)} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-amber-700 font-serif font-bold text-lg hover:underline decoration-amber-300 decoration-2 underline-offset-2"
+                    >
+                      {prophecy.ot_2_stelle} <ExternalLink size={14} className="opacity-50" />
+                    </a>
+                    <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Textstelle 2</span>
+                  </div>
                   <p className="text-slate-700 italic text-lg leading-relaxed font-serif">"{prophecy.ot_2_text_kurz}"</p>
                 </div>
               </div>
@@ -166,30 +170,36 @@ export const ProphecyDetail: React.FC<ProphecyDetailProps> = ({ data }) => {
             {/* Verse 1 */}
             <div className="bg-amber-50/40 p-6 rounded-xl border border-amber-100/50 shadow-sm relative mb-6">
               <div className="relative z-10">
-                <a 
-                  href={getBibleLink(prophecy.nt_stelle)} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-slate-800 font-serif font-bold text-lg mb-3 hover:text-amber-700 transition-colors"
-                >
-                  {prophecy.nt_stelle} <ExternalLink size={14} className="opacity-30" />
-                </a>
+                <div className="flex justify-between items-start mb-3">
+                  <a 
+                    href={getBibleLink(prophecy.nt_stelle)} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-slate-800 font-serif font-bold text-lg hover:text-amber-700 transition-colors"
+                  >
+                    {prophecy.nt_stelle} <ExternalLink size={14} className="opacity-30" />
+                  </a>
+                  {prophecy.nt_2_stelle && <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Textstelle 1</span>}
+                </div>
                 <p className="text-slate-700 text-lg leading-relaxed font-serif">"{prophecy.nt_text_kurz}"</p>
               </div>
             </div>
 
-            {/* Optional Verse 2 */}
+            {/* Optional Verse 2 (The requested capability for up to 2 NT texts) */}
             {prophecy.nt_2_stelle && (
               <div className="bg-amber-50/40 p-6 rounded-xl border border-amber-100/50 shadow-sm relative">
                 <div className="relative z-10">
-                  <a 
-                    href={getBibleLink(prophecy.nt_2_stelle)} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-slate-800 font-serif font-bold text-lg mb-3 hover:text-amber-700 transition-colors"
-                  >
-                    {prophecy.nt_2_stelle} <ExternalLink size={14} className="opacity-30" />
-                  </a>
+                  <div className="flex justify-between items-start mb-3">
+                    <a 
+                      href={getBibleLink(prophecy.nt_2_stelle)} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-slate-800 font-serif font-bold text-lg hover:text-amber-700 transition-colors"
+                    >
+                      {prophecy.nt_2_stelle} <ExternalLink size={14} className="opacity-30" />
+                    </a>
+                    <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Textstelle 2</span>
+                  </div>
                   <p className="text-slate-700 text-lg leading-relaxed font-serif">"{prophecy.nt_2_text_kurz}"</p>
                 </div>
               </div>
@@ -197,7 +207,7 @@ export const ProphecyDetail: React.FC<ProphecyDetailProps> = ({ data }) => {
           </div>
         </div>
 
-        {/* Kommentar Section (New) */}
+        {/* Kommentar Section */}
         {prophecy.kommentar && (
           <div className="p-6 sm:p-10 bg-slate-50 border-t border-stone-200">
             <div className="flex items-start gap-4">
@@ -233,7 +243,6 @@ export const ProphecyDetail: React.FC<ProphecyDetailProps> = ({ data }) => {
           <div className="flex-1 md:text-right">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Quellen & Vertiefung</h3>
             <div className="flex flex-col md:items-end gap-3">
-              {/* Ensure links are displayed even if original list was empty (fallback) */}
               {(prophecy.quelle_links.length > 0 ? prophecy.quelle_links : ["https://www.youtube.com/watch?v=_y56S4IUCdQ", "https://bruderhand.de/download/Allgemein/Der_verheissene_Erloeser.pdf"]).map((link, idx) => (
                 <a 
                   key={idx}
