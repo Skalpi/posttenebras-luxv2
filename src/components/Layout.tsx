@@ -53,6 +53,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link to="/about" className={`text-lg font-medium hover:text-amber-500 transition-colors ${location.pathname === '/about' ? 'text-amber-500 border-b-2 border-amber-500' : 'text-stone-200'}`}>
                 Über das Projekt
               </Link>
+              <a href="https://posttenebras-lux.de/impressum/" className="text-lg font-medium text-stone-200 hover:text-amber-500 transition-colors">
+                Impressum
+              </a>
               
               {/* Dropdown Menu */}
               <div className="relative" ref={dropdownRef}>
@@ -95,9 +98,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link to="/" className="block px-4 py-4 rounded-md text-lg font-medium text-stone-200 hover:bg-slate-700 hover:text-amber-500 border-b border-slate-700">
                 Übersicht der Prophetien
               </Link>
-              <Link to="/about" className="block px-4 py-4 rounded-md text-lg font-medium text-stone-200 hover:bg-slate-700 hover:text-amber-500">
+              <Link to="/about" className="block px-4 py-4 rounded-md text-lg font-medium text-stone-200 hover:bg-slate-700 hover:text-amber-500 border-b border-slate-700">
                 Über das Projekt
               </Link>
+              <a href="https://posttenebras-lux.de/impressum/" className="block px-4 py-4 rounded-md text-lg font-medium text-stone-200 hover:bg-slate-700 hover:text-amber-500">
+                Impressum
+              </a>
             </div>
           </div>
         )}
