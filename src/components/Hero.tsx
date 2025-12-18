@@ -6,12 +6,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="bg-slate-900 text-white py-12 md:py-16 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-           <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor" />
-        </svg>
-      </div>
+      {/* Background Pattern REMOVED */}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         <h1 className="text-3xl md:text-5xl font-serif font-bold text-amber-500 mb-6">

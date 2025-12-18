@@ -38,6 +38,8 @@ export const prophecies: Prophecy[] = [
     ot_zeitraum: "ca. 735 v. Chr.",
     nt_stelle: "Matthäus 1,22-23",
     nt_text_kurz: "Dies alles aber ist geschehen, damit erfüllt würde ... Siehe, die Jungfrau wird schwanger sein...",
+    nt_2_stelle: "Lukas 1,34-35",
+    nt_2_text_kurz: "Maria aber sprach zu dem Engel: Wie wird dies zugehen, da ich von keinem Mann weiß? Und der Engel antwortete und sprach zu ihr: Der Heilige Geist wird über dich kommen, und Kraft des Höchsten wird dich überschatten; darum wird auch das Heilige, das geboren werden wird, Sohn Gottes genannt werden.",
     kommentar: "Das hebräische Wort 'Almah', das hier verwendet wird, bezeichnet eine junge, unverheiratete Frau. Die Septuaginta (die griechische Übersetzung des AT, ca. 200 v. Chr.) übersetzt dieses Wort eindeutig mit 'Parthenos' (Jungfrau).",
     quelle_links: [
       "https://www.youtube.com/watch?v=qNq2x6VkEq8&list=PLuTOWnFpYJ0lGYINhcvTiL67y22AuukS9&index=3",
@@ -202,7 +204,7 @@ export const prophecies: Prophecy[] = [
     kategorie: ProphecyCategory.TOD,
     beschreibung: "Hände und Füße durchgraben (Kreuzigung).",
     ot_stelle: "Psalm 22,17",
-    ot_text_kurz: "Denn Hunde haben mich umgeben... Sie haben meine Hände und meine Füße durchgraben.",
+    ot_text_kurz: "Denn Hunde haben mich umgeben... Sie have meine Hände und meine Füße durchgraben.",
     ot_zeitraum: "ca. 1000 v. Chr. (David)",
     nt_stelle: "Johannes 19,18",
     nt_text_kurz: "Wo sie ihn kreuzigten und zwei andere mit ihm...",
