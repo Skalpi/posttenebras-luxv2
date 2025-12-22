@@ -1,15 +1,15 @@
 export const getBibleLink = (reference: string): string => {
   if (!reference) return '#';
   
-  // Clean up reference: 
-  // 1. Take part before first parenthesis (remove " (vgl. ...)")
-  // 2. Take part before first slash (remove " /11,1")
-  // 3. Trim whitespace
-  const cleanRef = reference.split('(')[0].split('/')[0].trim();
+  // Bereinigung der Referenz:
+  // 1. Teil vor der ersten Klammer nehmen (entfernt " (vgl. ...)")
+  // 2. Teil vor dem ersten Schrägstrich nehmen (falls mehrere Stellen gelistet)
+  // 3. Semikolons durch Kommas ersetzen für bessere bibleserver Kompatibilität
+  const cleanRef = reference.split('(')[0].split(';')[0].split('/')[0].trim();
   
-  // URL encode the reference
+  // URL-Codierung der Referenz
   const encoded = encodeURIComponent(cleanRef);
   
-  // Using Schlachter 2000 (SCH2000) as requested
+  // Standardmäßig Schlachter 2000 (SCH2000) verwenden, wie in den Anforderungen
   return `https://www.bibleserver.com/SCH2000/${encoded}`;
 };
